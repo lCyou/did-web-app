@@ -1,15 +1,15 @@
 <script setup lang="ts">
-
-const getKey = () => {
+function print_command(){
     window.__TAURI__
-        .invoke('print_command')
+        .invoke('create_keypair')
 }
+
 </script>
 
 <template>
     <div>
         <h1>Generate a key pair</h1>
-        <button value="" @click="getKey"> get keys </button>
+        <button value="" @click="print_command"> get keys </button>
     </div>
 </template>
 
